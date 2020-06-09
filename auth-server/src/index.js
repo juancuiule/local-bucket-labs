@@ -9,8 +9,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      'http://localhost:3000',
-      'https://auth-gato.netlify.com'
+      'http://localhost:5000',
+      'localhost:5000',
     ], // habilitar pedidos desde el front
     credentials: true,
   }),
@@ -29,4 +29,3 @@ app.post("/api/refresh_token", authController.refreshToken);
 app.listen(4000, () =>
   console.log(`Server listening on port ${4000}!`)
 );
-
