@@ -6,8 +6,10 @@ app.use("/auth", express.static("public/auth"));
 
 // no es necesario que el back haga esto, es solo para probar localmente
 // y poder simular los /experimento-*
-app.use("/experimento-a", express.static("public/experimento-a"));
-app.use("/experimento-b", express.static("public/experimento-b"));
+app.use("/experimento-a", express.static("public/experiments/experimento-a"));
+app.use("/experimento-b", express.static("public/experiments/experimento-b"));
+
+app.use("/common", express.static("public/common"));
 
 app.use("/", (req, res) => { res.redirect('/auth') });
 
