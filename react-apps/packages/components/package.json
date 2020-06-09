@@ -1,0 +1,26 @@
+{
+  "name": "@elgatoylacaja/components",
+  "version": "0.1.0",
+  "description": "a UI library for my monorepo",
+  "main": "./lib/index.js",
+  "module": "./lib-esm/index.js",
+  "types": "./lib/index.d.ts",
+  "author": "juancuiule",
+  "license": "MIT",
+  "scripts": {
+    "libbuild": "tsc && tsc --build tsconfig.esm.json"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "@elgatoylacaja/hooks": "0.1.0",
+    "@elgatoylacaja/utils": "0.1.0",
+    "@material-ui/core": "^4.9.4",
+    "@material-ui/styles": "^4.9.0",
+    "downshift": "^5.0.5",
+    "match-sorter": "^4.1.0",
+    "react": "^16.13.0"
+  }
+}
