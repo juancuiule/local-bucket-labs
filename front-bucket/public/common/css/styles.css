@@ -63,3 +63,23 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
+
+@keyframes consume-ltr {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes consume-rtl {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
