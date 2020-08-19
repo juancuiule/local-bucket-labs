@@ -25,4 +25,5 @@ jobs:
         ENDPOINT: ${{ secrets.ENDPOINT }}
         API_KEY_ID: ${{ secrets.API_KEY_ID }}
         SERVICE_INSTANCE_ID: ${{ secrets.SERVICE_INSTANCE_ID }}
+    - run: npm install
     - run: npm run push-to-bucket
