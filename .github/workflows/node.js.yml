@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -21,9 +21,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run push-to-bucket
       env: # Or as an environment variable
         ENDPOINT: ${{ secrets.ENDPOINT }}
         API_KEY_ID: ${{ secrets.API_KEY_ID }}
         SERVICE_INSTANCE_ID: ${{ secrets.SERVICE_INSTANCE_ID }}
-    - run: npm install
-    - run: npm run push-to-bucket
