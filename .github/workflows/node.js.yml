@@ -1,0 +1,28 @@
+name: Push a bucket
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+      env: # Or as an environment variable
+        ENDPOINT: ${{ secrets.ENDPOINT }}
+        API_KEY_ID: ${{ secrets.API_KEY_ID }}
+        SERVICE_INSTANCE_ID: ${{ secrets.SERVICE_INSTANCE_ID }}
+    - run: npm run push-to-bucket
