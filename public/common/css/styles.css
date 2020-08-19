@@ -22,9 +22,14 @@
   font-weight: 700;
 }
 
-@font-face {
+/* @font-face {
   font-family: neuton;
   src: url('../fonts/neuton.ttf') format('truetype');
+} */
+
+@font-face {
+  font-family: SourceSerifPro;
+  src: url('../fonts/SourceSerifPro-Regular.ttf') format('truetype');
 }
 
 body {
@@ -57,6 +62,8 @@ body {
   --google: #4284f4;
   --twitter: #5ecff0;
   --whatsapp: #08c65b;
+
+  --scale-ratio: 1;
 }
 
 #root {
