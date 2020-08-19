@@ -9,7 +9,7 @@ app.use(
       /http:\/\/192.168.0.5:\d{4}/,
       /http:\/\/localhost:\d{4}/,
       /localhost/
-    ], // habilitar pedidos desde el front
+    ],
     credentials: true,
   })
 );
